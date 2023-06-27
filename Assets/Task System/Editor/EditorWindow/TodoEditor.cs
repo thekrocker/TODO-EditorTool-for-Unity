@@ -9,7 +9,17 @@ public class TodoEditor : EditorWindow
 {
     private const string Path = "Assets/Task System/Editor/EditorWindow/";
 
+    // Our root container
     private VisualElement _rootContainer;
+
+    // Field that represents to add tasks
+    private TextField _addTaskTextField;
+
+    // Add Task Button
+    private Button _addTaskButton;
+
+    // Scrollview that shows our current tasks
+    private ScrollView _taskListScrollView;
 
     [MenuItem("Tools/To-do List")]
     static void OpenWindow()
@@ -40,5 +50,18 @@ public class TodoEditor : EditorWindow
 
         // Add it our container's stylesheet set.
         _rootContainer.styleSheets.Add(styleSheet);
+
+        // Referencing through Query.
+        _addTaskTextField = _rootContainer.Q<TextField>("taskTextField");
+        _addTaskButton = _rootContainer.Q<Button>("addTaskButton");
+        _taskListScrollView = _rootContainer.Q<ScrollView>("taskListScrollView");
+
+        // Assign on click event to add tasks
+        _addTaskButton.clicked += AddTask;
+    }
+
+    private void AddTask()
+    {
+        Debug.Log("Adding task");
     }
 }
