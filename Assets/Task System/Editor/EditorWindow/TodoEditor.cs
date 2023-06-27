@@ -9,7 +9,7 @@ public class TodoEditor : EditorWindow
 {
     private const string Path = "Assets/Task System/Editor/EditorWindow/";
 
-    private VisualElement _container;
+    private VisualElement _rootContainer;
 
     [MenuItem("Tools/To-do List")]
     static void OpenWindow()
@@ -27,18 +27,18 @@ public class TodoEditor : EditorWindow
 
     private void InitializeContainer()
     {
-        _container = rootVisualElement;
+        _rootContainer = rootVisualElement;
 
         // Get and load our UXML we've created.
         VisualTreeAsset treeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(Path + "TodoEditor.uxml");
 
         // Add it to the container by instantiating the tree asset
-        _container.Add(treeAsset.Instantiate());
+        _rootContainer.Add(treeAsset.Instantiate());
 
         // Get and load our Stylesheet
         StyleSheet styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(Path + "TodoEditor.uss");
 
         // Add it our container's stylesheet set.
-        _container.styleSheets.Add(styleSheet);
+        _rootContainer.styleSheets.Add(styleSheet);
     }
 }
