@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Task%20System/Editor/EditorWindow/TodoEditor.uss?fileID=7433441132597879392&amp;guid=9df43c5b517a06f498382a20238b5d25&amp;type=3#TodoEditor" />
+    <ui:VisualElement name="AddingTasksContainer">
+        <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" text="filler text" name="taskTextField" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="addTaskButton" />
+    </ui:VisualElement>
+    <ui:VisualElement name="DisplayingTasksContainer">
+        <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="taskListScrollView" />
+    </ui:VisualElement>
+</ui:UXML>
