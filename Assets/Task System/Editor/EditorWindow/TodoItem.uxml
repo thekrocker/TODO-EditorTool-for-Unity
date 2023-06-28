@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Task%20System/Editor/EditorWindow/TodoItem.uss?fileID=7433441132597879392&amp;guid=f0302a291456df446864c583e3fd48f7&amp;type=3#TodoItem" />
+    <ui:VisualElement name="taskContainer" style="flex-direction: row;">
+        <ui:Toggle name="taskToggle" />
+        <ui:Label text="Test" display-tooltip-when-elided="true" name="taskLabel" />
+    </ui:VisualElement>
+</ui:UXML>

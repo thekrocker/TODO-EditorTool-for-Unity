@@ -12,6 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfa2e22adec2a34693cde217b5febe2, type: 3}
   m_Name: Task List
   m_EditorClassIdentifier: 
-  <Tasks>k__BackingField:
-  - Test 1
-  - Test 2
